@@ -59,7 +59,7 @@ Có thể sử dụng: Ollama, vLLM, OpenAI API, Gemini API, hoặc bất kỳ L
 > **Quan trọng:** File `data/hotpot_mini.json` chỉ có 8 câu hỏi và được thiết kế cho mock runtime. Bạn **cần tự tạo thêm dữ liệu test** để kiểm tra implementation của mình.
 
 **Cách tạo dữ liệu test:**
-- Tải từ [HotpotQA dataset](https://hotpotqa.github.io/) và chuyển đổi sang format `QAExample`:
+- Tải từ [HotpotQA dataset](https://hotpotqa.github.io/) hoặc từ https://drive.google.com/file/d/1382R9RhGUFZZpuRsfi8BMKuv3yorOB9H/view?usp=sharing và chuyển đổi sang format `QAExample`:
   ```json
   {
     "qid": "my_q1",
