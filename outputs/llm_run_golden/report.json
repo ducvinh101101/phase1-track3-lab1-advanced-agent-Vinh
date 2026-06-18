@@ -1,0 +1,456 @@
+{
+  "meta": {
+    "dataset": "hotpot_golden.json",
+    "mode": "llm",
+    "num_records": 40,
+    "agents": [
+      "react",
+      "reflexion"
+    ]
+  },
+  "summary": {
+    "react": {
+      "count": 20,
+      "em": 0.8,
+      "avg_attempts": 1,
+      "avg_token_estimate": 840.45,
+      "avg_latency_ms": 10627.1
+    },
+    "reflexion": {
+      "count": 20,
+      "em": 0.9,
+      "avg_attempts": 1.3,
+      "avg_token_estimate": 1344.65,
+      "avg_latency_ms": 14370.5
+    },
+    "delta_reflexion_minus_react": {
+      "em_abs": 0.1,
+      "attempts_abs": 0.3,
+      "tokens_abs": 504.2,
+      "latency_abs": 3743.4
+    }
+  },
+  "failure_modes": {
+    "react": {
+      "none": 16,
+      "wrong_final_answer": 4
+    },
+    "reflexion": {
+      "none": 18,
+      "wrong_final_answer": 2
+    },
+    "all": {
+      "none": 34,
+      "wrong_final_answer": 6
+    }
+  },
+  "examples": [
+    {
+      "qid": "gold1",
+      "agent_type": "react",
+      "gold_answer": "Beijing",
+      "predicted_answer": "The capital of China, where the Great Wall was built, is Beijing.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold2",
+      "agent_type": "react",
+      "gold_answer": "classical",
+      "predicted_answer": "The composer of Swan Lake, Pyotr Ilyich Tchaikovsky, is most known for Romantic period classical music.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold3",
+      "agent_type": "react",
+      "gold_answer": "Peruvian sol",
+      "predicted_answer": "The currency used in the country where Machu Picchu is located is the Peruvian sol.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold4",
+      "agent_type": "react",
+      "gold_answer": "Mediterranean Sea",
+      "predicted_answer": "The longest river in Africa, the Nile, empties into the Mediterranean Sea.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold5",
+      "agent_type": "react",
+      "gold_answer": "C",
+      "predicted_answer": "The Linux operating system, created by Linus Torvalds, is based on the Linux kernel. Since the Linux kernel is written primarily in the C programming language, it can be concluded that the operating system created by Linus Torvalds was originally written using the C programming language.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold6",
+      "agent_type": "react",
+      "gold_answer": "Dutch, French, and German",
+      "predicted_answer": "To answer the question, let's follow the reasoning path:\n\n1. Identify the country that borders France to the northeast: The context states that France is bordered to the northeast by Belgium.\n2. Confirm that this country has Brussels as its capital: The context for Belgium confirms that Brussels is indeed its capital.\n3. Determine the official languages of this country: The context for Belgium mentions that it has three official languages\u2014Dutch, French, and German.\n\nTherefore, the official language of the country that borders France to the northeast and has Brussels as its capital is one of Dutch, French, or German.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold7",
+      "agent_type": "react",
+      "gold_answer": "no Academy Award win",
+      "predicted_answer": "The director of the 1994 film set in Shawshank State Penitentiary, Frank Darabont, did not receive any Academy Awards despite being nominated multiple times.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold8",
+      "agent_type": "react",
+      "gold_answer": "Mars",
+      "predicted_answer": "The NASA rover Curiosity is currently exploring Mars.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold9",
+      "agent_type": "react",
+      "gold_answer": "Mont Blanc",
+      "predicted_answer": "The highest mountain in the country where the Colosseum is located is not mentioned in the given context. However, based on the provided information about Italy's geography, the highest point in Italy is Mont Blanc (Monte Bianco) at 4,808 meters, which is located on the border with France, not in Italy. Therefore, we cannot determine the highest mountain within Italy from this context alone. Given that the Colosseum is in Rome, Italy, the highest mountain in Italy would be relevant, but it is not specified in the provided texts.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold10",
+      "agent_type": "react",
+      "gold_answer": "uranium",
+      "predicted_answer": "The scientist who developed the theory of general relativity, Albert Einstein, helped theorize that uranium could be released from atoms for enormous energy through his correspondence about uranium fission's potential, which led to further research during the Manhattan Project.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold11",
+      "agent_type": "react",
+      "gold_answer": "Atlantic Ocean",
+      "predicted_answer": "The Amazon River flows into the Atlantic Ocean.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold12",
+      "agent_type": "react",
+      "gold_answer": "federal parliamentary democratic republic",
+      "predicted_answer": "The country where the Taj Mahal is located, India, has a federal parliamentary democratic republic form of government.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold13",
+      "agent_type": "react",
+      "gold_answer": "approximately 66000",
+      "predicted_answer": "The population of the city where the headquarters of the company that created the iPhone is located is approximately 66,000. This is because the iPhone is created by Apple Inc., which is headquartered in Cupertino, California, and Cupertino has a population of about 66,000.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold14",
+      "agent_type": "react",
+      "gold_answer": "Bab-el-Mandeb",
+      "predicted_answer": "The Bab-el-Mandeb strait separates the continent where Mount Kilimanjaro is located (Africa) from the Arabian Peninsula.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold15",
+      "agent_type": "react",
+      "gold_answer": "Neil Armstrong",
+      "predicted_answer": "Neil Armstrong was the first person to set foot on the celestial body (the Moon) that causes tides on Earth.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold16",
+      "agent_type": "react",
+      "gold_answer": "football",
+      "predicted_answer": "The club that plays at Camp Nou is known for football (soccer). This conclusion is drawn from the fact that Camp Nou is the home ground of FC Barcelona, which is a professional football club based in Barcelona, competing in La Liga.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold17",
+      "agent_type": "react",
+      "gold_answer": "Challenger Deep",
+      "predicted_answer": "The deepest point in the ocean that borders Japan to the east is part of the Pacific Ocean, specifically the Challenger Deep in the Mariana Trench, which reaches approximately 10,935 meters deep. However, it's important to note that this trench is located west of Japan, not to its east. The eastern border of Japan is the Pacific Ocean itself, but no specific deep point within the general Pacific Ocean is mentioned in the given context.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold18",
+      "agent_type": "react",
+      "gold_answer": "Canadian-American",
+      "predicted_answer": "The architect who designed the museum in Bilbao that is part of the Guggenheim network, Frank Gehry, was Canadian-American.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold19",
+      "agent_type": "react",
+      "gold_answer": "Africa",
+      "predicted_answer": "The pyramids of Giza are located in Egypt, which has the majority of its territory in northeastern Africa. Therefore, the continent where the pyramids of Giza are located is Africa.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold20",
+      "agent_type": "react",
+      "gold_answer": "1951",
+      "predicted_answer": "The Treaty of San Francisco, which ended the war in which the atomic bomb was first used in combat, was signed in 1951.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold1",
+      "agent_type": "reflexion",
+      "gold_answer": "Beijing",
+      "predicted_answer": "The capital of China, where the Great Wall was built, is Beijing.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold2",
+      "agent_type": "reflexion",
+      "gold_answer": "classical",
+      "predicted_answer": "The composer of Swan Lake, Pyotr Ilyich Tchaikovsky, is most known for his work in the Romantic period genre of classical music.",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "gold3",
+      "agent_type": "reflexion",
+      "gold_answer": "Peruvian sol",
+      "predicted_answer": "The currency used in the country where Machu Picchu is located is the Peruvian sol.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold4",
+      "agent_type": "reflexion",
+      "gold_answer": "Mediterranean Sea",
+      "predicted_answer": "The longest river in Africa, the Nile, empties into the Mediterranean Sea.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold5",
+      "agent_type": "reflexion",
+      "gold_answer": "C",
+      "predicted_answer": "The Linux operating system, created by Linus Torvalds, is based on the Linux kernel. Since the Linux kernel is written primarily in the C programming language, it can be concluded that the operating system created by Linus Torvalds was originally written using the C programming language.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold6",
+      "agent_type": "reflexion",
+      "gold_answer": "Dutch, French, and German",
+      "predicted_answer": "To answer the question, let's follow the reasoning path:\n\n1. Identify the country that borders France to the northeast: The context states that France is bordered to the northeast by Belgium.\n2. Confirm that this country has Brussels as its capital: The context for Belgium confirms that Brussels is indeed its capital.\n3. Determine the official languages of this country: The context for Belgium mentions that it has three official languages\u2014Dutch, French, and German.\n\nTherefore, the official language of the country that borders France to the northeast and has Brussels as its capital is one of Dutch, French, or German.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold7",
+      "agent_type": "reflexion",
+      "gold_answer": "no Academy Award win",
+      "predicted_answer": "Based on the provided context, the director of the 1994 film set in Shawshank State Penitentiary, Frank Darabont, was nominated for seven Academy Awards but did not win any. Therefore, he did not receive any Academy Awards from the Academy for this film.",
+      "is_correct": false,
+      "attempts": 3,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 2
+    },
+    {
+      "qid": "gold8",
+      "agent_type": "reflexion",
+      "gold_answer": "Mars",
+      "predicted_answer": "The NASA rover Curiosity is currently exploring Mars.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold9",
+      "agent_type": "reflexion",
+      "gold_answer": "Mont Blanc",
+      "predicted_answer": "The Colosseum is located in Rome, Italy. The highest mountain in Italy is Monte Bianco (Mont Blanc) at 4,808 metres. Therefore, the highest mountain in the country where the Colosseum is located is Monte Bianco (Mont Blanc).",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "gold10",
+      "agent_type": "reflexion",
+      "gold_answer": "uranium",
+      "predicted_answer": "The scientist who developed the theory of general relativity, Albert Einstein, helped theorize that uranium could be released from atoms for enormous energy through his correspondence about uranium fission's potential, which led to further research during the Manhattan Project.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold11",
+      "agent_type": "reflexion",
+      "gold_answer": "Atlantic Ocean",
+      "predicted_answer": "The Amazon River flows into the Atlantic Ocean.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold12",
+      "agent_type": "reflexion",
+      "gold_answer": "federal parliamentary democratic republic",
+      "predicted_answer": "The country where the Taj Mahal is located, India, has a federal parliamentary democratic republic form of government.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold13",
+      "agent_type": "reflexion",
+      "gold_answer": "approximately 66000",
+      "predicted_answer": "The population of the city where the headquarters of the company that created the iPhone is located is approximately 66,000. This is because the iPhone is created by Apple Inc., which is headquartered in Cupertino, California, and Cupertino has a population of about 66,000.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold14",
+      "agent_type": "reflexion",
+      "gold_answer": "Bab-el-Mandeb",
+      "predicted_answer": "The Bab-el-Mandeb strait separates the continent where Mount Kilimanjaro is located (Africa) from the Arabian Peninsula.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold15",
+      "agent_type": "reflexion",
+      "gold_answer": "Neil Armstrong",
+      "predicted_answer": "Neil Armstrong was the first person to set foot on the celestial body (the Moon) that causes tides on Earth.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold16",
+      "agent_type": "reflexion",
+      "gold_answer": "football",
+      "predicted_answer": "The club that plays at Camp Nou is known for football (soccer). This conclusion is drawn from the fact that Camp Nou is the home ground of FC Barcelona, which is a professional football club based in Barcelona, competing in La Liga.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold17",
+      "agent_type": "reflexion",
+      "gold_answer": "Challenger Deep",
+      "predicted_answer": "The deepest point in the ocean that borders Japan to the east is the Japan Trench. However, the specific depth is not provided in the given context. The context mentions the Challenger Deep in the Mariana Trench as the deepest point in the Pacific Ocean, but it does not provide information about the Japan Trench's depth.",
+      "is_correct": false,
+      "attempts": 3,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 2
+    },
+    {
+      "qid": "gold18",
+      "agent_type": "reflexion",
+      "gold_answer": "Canadian-American",
+      "predicted_answer": "The architect who designed the museum in Bilbao that is part of the Guggenheim network, Frank Gehry, was Canadian-American.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold19",
+      "agent_type": "reflexion",
+      "gold_answer": "Africa",
+      "predicted_answer": "The pyramids of Giza are located in Egypt, which has the majority of its territory in northeastern Africa. Therefore, the continent where the pyramids of Giza are located is Africa.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "gold20",
+      "agent_type": "reflexion",
+      "gold_answer": "1951",
+      "predicted_answer": "The Treaty of San Francisco, which ended the war in which the atomic bomb was first used in combat, was signed in 1951.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    }
+  ],
+  "extensions": [
+    "structured_evaluator",
+    "reflection_memory",
+    "benchmark_report_json",
+    "mock_mode_for_autograding"
+  ],
+  "discussion": "Reflexion helps when the first attempt stops after the first hop or drifts to a wrong second-hop entity. The tradeoff is higher attempts, token cost, and latency. In a real report, students should explain when the reflection memory was useful, which failure modes remained, and whether evaluator quality limited gains."
+}
